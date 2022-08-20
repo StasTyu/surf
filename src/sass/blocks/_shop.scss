@@ -1,0 +1,180 @@
+.shop {
+    background-image: url('../img/shop-bg.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    .slider-arrows{
+        opacity: .25;
+    }
+
+    &__slider {
+        padding-left: 132px;
+
+        &-inner {
+            display: flex;
+        }
+
+        &-info {
+            max-width: 480px;
+            width: 100%;
+            margin-right: 40px;
+            padding-top: 150px;
+        }
+    }
+
+    .descr__head {
+        max-width: 340px;
+        margin-bottom: 47px;
+    }
+
+    .shop__star-list {
+        margin-left: -10px;
+    }
+
+    .shop__slider-price {
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 64px;
+
+        sup {
+            font-size: 18px;
+            padding-left: 2px;
+        }
+    }
+
+    .shop__slider-content {
+        padding-left: 170px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .surfboard {
+        position: relative;
+
+        &-box {
+            position: absolute;
+        }
+        .surfboard__position--1{
+            top: calc(202 / 699 * 100%);
+            right: calc(36 / 228 * 100%);
+        }
+        .surfboard__position--2{
+            top: calc(295 / 699 * 100%);
+            left: calc(-5 / 228 * 100%);
+        }
+        .surfboard__position--3{
+            bottom: calc(65 / 699 * 100%);
+            left: calc(53 / 228 * 100%);
+            .surfboard-box__content{
+                padding-left: 0;
+                padding-right: 104px;
+                /* top: -15px;
+                right: 35px; */
+                transform: translateX(calc(-100% - 55px));
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 80px;
+                    height: 1px;
+                    background: #FFFFFF;
+                    opacity: 0.5;
+                    left: auto;
+                    right: 0;
+                    top: 50%;
+                }
+            }
+        }
+
+        &-box__circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            background-color: #fff;
+            cursor: pointer;
+            .circle-row {
+                background-color: $green;
+                position: absolute;
+                width: 12px;
+                height: 2px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                & + .circle-row {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+        }
+        &-box__circle.active{
+            .circle-row {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+        }
+        &-box__content{
+            display: none;
+            position: absolute;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 24px;
+            width: 359px;
+            padding-left: 104px;
+            top: -15px;
+            left: 35px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 1px;
+                background: #FFFFFF;
+                opacity: 0.5;
+                left: 0;
+                top: 50%;
+            }
+        }
+        &-box__circle.active + .surfboard-box__content{
+            display: block;
+        }
+    }
+
+    .shop__extras {
+        padding-left: 160px;
+    }
+
+    .shop__extras-inner {
+        display: flex;
+    }
+
+    .shop__extras-box {
+        margin-right: 57px;
+        text-align: center;
+    }
+
+    .shop__extras-img {
+        height: 105px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shop__extras-title {
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+
+    .shop__extras-name {
+        font-size: 18px;
+        line-height: 22px;
+        opacity: 0.5;
+        letter-spacing: 8px;
+        margin: 36px 0 16px;
+    }
+
+    .shop__extras-price {
+        font-weight: 800;
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
